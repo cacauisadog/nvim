@@ -3,7 +3,39 @@ vim.g.maplocalleader = " "
 
 local keymap = vim.keymap -- for brevity
 
-keymap.set("i", "<C-s>", "<ESC>:w<CR>", { desc = "Use ctrl+s to save and exit insert mode" })
+-----------------
+-- Normal Mode --
+-----------------
+-- Better window navigation
+keymap.set("n", "<C-k>", "<C-w>k")
+keymap.set("n", "<C-h>", "<C-w>h")
+keymap.set("n", "<C-j>", "<C-w>j")
+keymap.set("n", "<C-l>", "<C-w>l")
+
+-- Navigate buffers
+keymap.set("n", "<S-l>", ":bnext<CR>")
+keymap.set("n", "<S-h>", ":bprevious<CR>")
+
+-- Center screen when jumping with Ctrl-d and Ctrl-u
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Center screen when jumping to searched words
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
+
 keymap.set("n", "<C-s>", "<ESC>:w<CR>", { desc = "Use ctrl+s to save" })
 
-keymap.set("n", "<CR>", ":nohl<CR>", { desc = "Clear search highlight on enter"})
+keymap.set("n", "<CR>", ":nohl<CR>", { desc = "Clear search highlight on enter" })
+
+-----------------
+-- Insert Mode --
+-----------------
+keymap.set("i", "<C-s>", "<ESC>:w<CR>", { desc = "Use ctrl+s to save and exit insert mode" })
+
+-----------------
+-- Visual Mode --
+-----------------
+-- Stay in indent mode
+keymap.set("v", "<", "<gv")
+keymap.set("v", ">", ">gv")
