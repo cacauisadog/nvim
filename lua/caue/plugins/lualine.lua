@@ -6,7 +6,12 @@ return {
 		local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
 		lualine.setup({
+			options = {
+				disabled_filetypes = { "dashboard", "NvimTree", "Outline" },
+			},
+
 			sections = {
+				lualine_c = { { "filename", path = 3 } },
 				lualine_x = {
 					{
 						lazy_status.updates,
