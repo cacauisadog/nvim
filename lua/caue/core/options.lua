@@ -20,7 +20,6 @@ opt.cursorline = true -- highlight the current line
 -- turn on termguicolors for more complex colorschemes to work
 -- have to use a terminal supports this (iterm2, wezterm, etc)
 opt.termguicolors = true
-opt.background = "dark" -- colorschemes that support light and dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace
