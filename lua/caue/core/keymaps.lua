@@ -1,3 +1,5 @@
+local ui_utils = require("caue.util.ui")
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -15,6 +17,9 @@ keymap.set("n", "<C-l>", "<C-w>l")
 -- Navigate buffers
 keymap.set("n", "<S-l>", ":bnext<CR>")
 keymap.set("n", "<S-h>", ":bprevious<CR>")
+keymap.set("n", "<leader>bd", ui_utils.bufremove, { desc = "Delete buffer" })
+keymap.set("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete buffer and window" })
+keymap.set("n", "<leader>`", "<cmd>e #<cr>", { desc = "Previous buffer" })
 
 -- Center screen when jumping with Ctrl-d and Ctrl-u
 keymap.set("n", "<C-d>", "<C-d>zz")
