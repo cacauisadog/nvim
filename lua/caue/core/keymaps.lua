@@ -13,6 +13,10 @@ keymap.set("n", "<C-k>", "<C-w>k")
 keymap.set("n", "<C-h>", "<C-w>h")
 keymap.set("n", "<C-j>", "<C-w>j")
 keymap.set("n", "<C-l>", "<C-w>l")
+keymap.set("n", "<leader>ww", "<C-W>p", { desc = "Other window", remap = true })
+keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete window", remap = true })
+keymap.set("n", "<leader>w-", "<C-W>v", { desc = "Split window right", remap = true })
+keymap.set("n", "<leader>w_", "<C-W>s", { desc = "Split window below", remap = true })
 
 -- Navigate buffers
 keymap.set("n", "<S-l>", ":bnext<CR>")
