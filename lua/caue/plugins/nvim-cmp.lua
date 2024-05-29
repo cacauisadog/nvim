@@ -58,6 +58,10 @@ return {
 					ellipsis_char = "...",
 				}),
 			},
+
+			experimental = {
+				ghost_text = true,
+			},
 		})
 	end,
 }
