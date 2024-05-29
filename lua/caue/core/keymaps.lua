@@ -25,6 +25,14 @@ keymap.set("n", "<leader>bd", ui_utils.bufremove, { desc = "Delete buffer" })
 keymap.set("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete buffer and window" })
 keymap.set("n", "<leader>`", "<cmd>e #<cr>", { desc = "Previous buffer" })
 
+-- Navigate tabs
+keymap.set("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last tab" })
+keymap.set("n", "<leader><tab>f", "<cmd>tabfirst<cr>", { desc = "First tab" })
+keymap.set("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New tab" })
+keymap.set("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next tab" })
+keymap.set("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close tab" })
+keymap.set("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous tab" })
+
 -- Center screen when jumping with Ctrl-d and Ctrl-u
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
