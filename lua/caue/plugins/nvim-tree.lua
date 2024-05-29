@@ -15,8 +15,8 @@ return {
 			hijack_unnamed_buffer_when_opening = false,
 			root_dirs = {},
 			prefer_startup_root = false,
-			sync_root_with_cwd = false,
-			reload_on_bufenter = false,
+			sync_root_with_cwd = true,
+			reload_on_bufenter = true,
 			respect_buf_cwd = false,
 			select_prompts = false,
 			sort = {
@@ -130,9 +130,9 @@ return {
 				auto_open = true,
 			},
 			update_focused_file = {
-				enable = false,
+				enable = true,
 				update_root = {
-					enable = false,
+					enable = true,
 					ignore_list = {},
 				},
 				exclude = false,
