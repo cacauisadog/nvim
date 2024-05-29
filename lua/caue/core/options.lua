@@ -1,5 +1,8 @@
 local opt = vim.opt
 
+-- recommended by auto-session
+opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
 opt.relativenumber = true
 opt.number = true
 
@@ -36,3 +39,7 @@ opt.showtabline = 2 -- always show tabs
 
 opt.scrolloff = 8 -- offsets the currently selected line by 8 vertically
 opt.sidescrolloff = 8 -- offsets the currently selected line by 8 horizontally
+
+-- recommended by nvim-tree: disable the netrw vim plugin
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
