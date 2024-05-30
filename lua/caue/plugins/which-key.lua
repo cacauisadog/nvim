@@ -6,6 +6,23 @@ return {
 		vim.o.timeoutlen = 500
 	end,
 	opts = {
-		-- we leave it empty to use the default settings
+		defaults = {
+			mode = { "n", "v" },
+			["<leader><Tab>"] = { name = "+Tabs" },
+			["<leader>b"] = { name = "+Buffers" },
+			["<leader>e"] = { name = "+Explorer" },
+			["<leader>f"] = { name = "+Find" },
+			["<leader>g"] = { name = "+Git" },
+			["<leader>h"] = { name = "+Hunks" },
+			["<leader>l"] = { name = "+Lsp" },
+			["<leader>v"] = { name = "+Venv Python" },
+			["<leader>w"] = { name = "+Windows" },
+			["<leader>x"] = { name = "+Trouble" },
+		},
 	},
+	config = function(_, opts)
+		local wk = require("which-key")
+		wk.setup(opts)
+		wk.register(opts.defaults)
+	end,
 }
