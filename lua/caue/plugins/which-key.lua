@@ -13,7 +13,7 @@ return {
 			["<leader>e"] = { name = "+Explorer" },
 			["<leader>f"] = { name = "+Find" },
 			["<leader>g"] = { name = "+Git" },
-			["<leader>h"] = { name = "+Hunks" },
+			["<leader>gh"] = { name = "+Hunks" },
 			["<leader>l"] = { name = "+Lsp" },
 			["<leader>v"] = { name = "+Venv Python" },
 			["<leader>w"] = { name = "+Windows" },
