@@ -49,10 +49,19 @@ return {
 		--set keymaps
 		local keymap = vim.keymap
 
-		keymap.set("n", "<leader><space>", "<cmd>Telescope find_files<CR>", { desc = "Fuzzy find files in cwd" })
-		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", { desc = "Fuzzy find recent files" })
-		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", { desc = "Fuzzy find string under cursor" })
+		-- File and text searching keymaps
+		keymap.set("n", "<leader><space>", "<cmd>Telescope find_files<CR>", { desc = "Find file" })
 		keymap.set("n", "<leader>ff", "<cmd>Telescope live_grep_args<CR>", { desc = "Find text" })
+		keymap.set(
+			"n",
+			"<leader>fF",
+			"<cmd>Telescope live_grep grep_open_files=true<CR>",
+			{ desc = "Find text in currently open buffers" }
+		)
+		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", { desc = "Find recent files" })
+		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", { desc = "Find string under cursor" })
 		keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find todos" })
+		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Find buffers" })
+		---
 	end,
 }
