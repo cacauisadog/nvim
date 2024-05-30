@@ -14,6 +14,7 @@ return {
 			["<leader>f"] = { name = "+Find" },
 			["<leader>g"] = { name = "+Git" },
 			["<leader>gh"] = { name = "+Hunks" },
+			["<leader>h"] = { name = "+Harpoon" },
 			["<leader>l"] = { name = "+Lsp" },
 			["<leader>v"] = { name = "+Venv Python" },
 			["<leader>w"] = { name = "+Windows" },

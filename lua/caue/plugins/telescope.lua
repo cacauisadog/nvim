@@ -59,6 +59,7 @@ return {
 			{ desc = "Find text in currently open buffers" }
 		)
 		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", { desc = "Find recent files" })
+		keymap.set("n", "<leader>fR", "<cmd>Telescope resume<CR>", { desc = "Resume previous search" })
 		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", { desc = "Find string under cursor" })
 		keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find todos" })
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Find buffers" })
