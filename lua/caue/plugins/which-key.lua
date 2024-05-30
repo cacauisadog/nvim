@@ -19,6 +19,18 @@ return {
 			["<leader>v"] = { name = "+Venv Python" },
 			["<leader>w"] = { name = "+Windows" },
 			["<leader>x"] = { name = "+Trouble" },
+
+			-- Hide the buffer shortcuts from which-key
+			["<leader>1"] = "which_key_ignore",
+			["<leader>2"] = "which_key_ignore",
+			["<leader>3"] = "which_key_ignore",
+			["<leader>4"] = "which_key_ignore",
+			["<leader>5"] = "which_key_ignore",
+			["<leader>6"] = "which_key_ignore",
+			["<leader>7"] = "which_key_ignore",
+			["<leader>8"] = "which_key_ignore",
+			["<leader>9"] = "which_key_ignore",
+			["<leader>$"] = "which_key_ignore",
 		},
 	},
 	config = function(_, opts)
