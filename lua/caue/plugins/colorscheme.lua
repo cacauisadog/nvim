@@ -50,6 +50,10 @@ return {
 						enabled = true,
 						indentscope_color = "",
 					},
+					telescope = {
+						enabled = true,
+						style = "nvchad",
+					},
 					-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 				},
 			})
