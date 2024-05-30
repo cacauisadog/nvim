@@ -41,6 +41,9 @@ return {
 				opts.desc = "Show LSP type definitions"
 				keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 
+				opts.desc = "Show documentation for what is under cursor"
+				keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+
 				opts.desc = "See available code actions"
 				keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
@@ -50,11 +53,11 @@ return {
 				opts.desc = "Show buffer diagnostics"
 				keymap.set("n", "<leader>lD", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
 
-				opts.desc = "Show documentation for what is under cursor"
-				keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
-
 				opts.desc = "Restart LSP"
 				keymap.set("n", "<leader>lL", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+				opts.desc = "Document symbols"
+				keymap.set("n", "<leader>ls", "<cmd>Telescope lsp_document_symbols<CR>", opts) -- show document symbols
 
 				-- diagnostics
 				local diagnostic_goto = function(next, severity)
