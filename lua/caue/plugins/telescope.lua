@@ -63,5 +63,12 @@ return {
 		keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find todos" })
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Find buffers" })
 		---
+
+		--- Git related keymaps
+		keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", { desc = "Show branches" })
+		keymap.set("n", "<leader>gc", "<cmd>Telescope git_bcommits<CR>", { desc = "Show buffer commits" })
+		keymap.set("n", "<leader>gC", "<cmd>Telescope git_commits<CR>", { desc = "Show all repository commits" })
+		keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "Show current git status" })
+		keymap.set("n", "<leader>gS", "<cmd>Telescope git_stash<CR>", { desc = "Show stash" })
 	end,
 }
