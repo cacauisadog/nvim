@@ -24,12 +24,6 @@ return {
 					notify_user_on_venv_activation = true, -- notifies user on activation of the virtual env
 					search_timeout = 5, -- if a search takes longer than this many seconds, stop it and alert the user
 				},
-				search = {
-					-- this is my custom `fd` command to search for the virtualenvs I've created with `pyenv virtualenv x.x.x venv-name`
-					pyenv_venvs = {
-						command = "fd 'versions/.*[0-9a-z_-]+.*/bin/python$' ~/.pyenv/versions --full-path --color never -E /proc",
-					},
-				},
 			},
 		})
 	end,
