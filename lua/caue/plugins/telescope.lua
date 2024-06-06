@@ -51,6 +51,12 @@ return {
 
 		-- File and text searching keymaps
 		keymap.set("n", "<leader><space>", "<cmd>Telescope find_files<CR>", { desc = "Find file" })
+		keymap.set(
+			"n",
+			"<leader>fh",
+			"<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-u', '--glob', '!*.git/*', '--glob', '!*node_modules' }})<CR>",
+			{ desc = "Find including hidden files" }
+		)
 		keymap.set("n", "<leader>ff", "<cmd>Telescope live_grep_args<CR>", { desc = "Find text" })
 		keymap.set(
 			"n",
