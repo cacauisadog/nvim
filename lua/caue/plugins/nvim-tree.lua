@@ -28,7 +28,7 @@ return {
 				centralize_selection = false,
 				cursorline = true,
 				debounce_delay = 15,
-				side = "left",
+				side = "right",
 				preserve_window_proportions = false,
 				number = false,
 				relativenumber = false,
