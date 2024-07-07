@@ -26,6 +26,10 @@ return {
 			format_on_save = nil,
 		})
 
+		conform.formatters.isort = {
+			prepend_args = { "--profile", "black" },
+		}
+
 		vim.keymap.set({ "n", "v" }, "<leader>lf", function()
 			conform.format({
 				lsp_fallback = true,
