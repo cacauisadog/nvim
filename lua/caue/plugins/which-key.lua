@@ -8,34 +8,32 @@ return {
 	opts = {
 		defaults = {
 			mode = { "n", "v" },
-			["<leader><Tab>"] = { name = "+Tabs" },
-			["<leader>b"] = { name = "+Buffers" },
-			["<leader>e"] = { name = "+Explorer" },
-			["<leader>f"] = { name = "+Find" },
-			["<leader>g"] = { name = "+Git" },
-			["<leader>gh"] = { name = "+Hunks" },
-			["<leader>h"] = { name = "+Harpoon" },
-			["<leader>l"] = { name = "+Lsp" },
-			["<leader>v"] = { name = "+Venv Python" },
-			["<leader>w"] = { name = "+Windows" },
-			["<leader>x"] = { name = "+Trouble" },
-
-			-- Hide the buffer shortcuts from which-key
-			["<leader>1"] = "which_key_ignore",
-			["<leader>2"] = "which_key_ignore",
-			["<leader>3"] = "which_key_ignore",
-			["<leader>4"] = "which_key_ignore",
-			["<leader>5"] = "which_key_ignore",
-			["<leader>6"] = "which_key_ignore",
-			["<leader>7"] = "which_key_ignore",
-			["<leader>8"] = "which_key_ignore",
-			["<leader>9"] = "which_key_ignore",
-			["<leader>$"] = "which_key_ignore",
+			{ "<leader>$", hidden = true },
+			{ "<leader>1", hidden = true },
+			{ "<leader>2", hidden = true },
+			{ "<leader>3", hidden = true },
+			{ "<leader>4", hidden = true },
+			{ "<leader>5", hidden = true },
+			{ "<leader>6", hidden = true },
+			{ "<leader>7", hidden = true },
+			{ "<leader>8", hidden = true },
+			{ "<leader>9", hidden = true },
+			{ "<leader><Tab>", group = "Tabs" },
+			{ "<leader>b", group = "Buffers" },
+			{ "<leader>e", group = "Explorer" },
+			{ "<leader>f", group = "Find" },
+			{ "<leader>g", group = "Git" },
+			{ "<leader>gh", group = "Hunks" },
+			{ "<leader>h", group = "Harpoon" },
+			{ "<leader>l", group = "Lsp" },
+			{ "<leader>v", group = "Venv Python" },
+			{ "<leader>w", group = "Windows" },
+			{ "<leader>x", group = "Trouble" },
 		},
 	},
 	config = function(_, opts)
 		local wk = require("which-key")
 		wk.setup(opts)
-		wk.register(opts.defaults)
+		wk.add(opts.defaults)
 	end,
 }
