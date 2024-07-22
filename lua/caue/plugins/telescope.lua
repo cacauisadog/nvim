@@ -53,7 +53,7 @@ return {
 		keymap.set("n", "<leader><space>", "<cmd>Telescope find_files<CR>", { desc = "Find file" })
 		keymap.set(
 			"n",
-			"<leader>fh",
+			"<leader>fH",
 			"<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-u', '--glob', '!*.git/*', '--glob', '!*node_modules' }})<CR>",
 			{ desc = "Find including hidden files" }
 		)
