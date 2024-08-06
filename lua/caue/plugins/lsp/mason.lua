@@ -45,7 +45,7 @@ return {
 				"isort", -- python formatter for ordering imports
 				"black", -- python formatter
 				"flake8", -- python linter
-				"eslint_d", -- general frontend linter
+				"eslint", -- general frontend linter
 			},
 		})
 	end,
