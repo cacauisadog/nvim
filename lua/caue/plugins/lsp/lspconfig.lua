@@ -123,6 +123,7 @@ return {
 				lspconfig["emmet_ls"].setup({
 					capabilities = capabilities,
 					filetypes = {
+						"astro",
 						"html",
 						"htmldjango",
 						"typescriptreact",
