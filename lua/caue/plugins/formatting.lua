@@ -21,14 +21,9 @@ return {
 				graphql = { "prettier" },
 				liquid = { "prettier" },
 				lua = { "stylua" },
-				python = { "isort", "black" },
 			},
 			format_on_save = nil,
 		})
-
-		conform.formatters.isort = {
-			prepend_args = { "--profile", "black" },
-		}
 
 		vim.keymap.set({ "n", "v" }, "<leader>lf", function()
 			conform.format({

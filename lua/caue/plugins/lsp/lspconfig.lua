@@ -154,6 +154,35 @@ return {
 					},
 				})
 			end,
+			["ruff"] = function()
+				-- Ruff for linting and formatting
+				lspconfig["ruff"].setup({
+					capabilities = capabilities,
+					init_options = {
+						settings = {
+							args = {},
+						},
+					},
+				})
+			end,
+			["pyright"] = function()
+				-- Pyright for everything else
+				lspconfig["pyright"].setup({
+					settings = {
+						pyright = {
+							autoImportCompletion = true,
+							-- using Ruff's import organizer
+							disableOrganizeImports = true,
+						},
+						python = {
+							analysis = {
+								-- ignore all files for analysis to exclusively use Ruff for linting
+								ignore = { "*" },
+							},
+						},
+					},
+				})
+			end,
 		})
 	end,
 }

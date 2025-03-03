@@ -35,16 +35,15 @@ return {
 				"lua_ls",
 				"emmet_ls",
 				"pyright",
+				"ruff",
 			},
+			automatic_installation = false,
 		})
 
 		mason_tool_installer.setup({
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
-				"isort", -- python formatter for ordering imports
-				"black", -- python formatter
-				"flake8", -- python linter
 				"eslint", -- general frontend linter
 			},
 		})

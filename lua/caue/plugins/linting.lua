@@ -10,7 +10,6 @@ return {
 			javascriptreact = { "eslint" },
 			typescriptreact = { "eslint" },
 			vue = { "eslint" },
-			python = { "flake8" },
 			htmldjango = { "djlint" },
 		}
 
