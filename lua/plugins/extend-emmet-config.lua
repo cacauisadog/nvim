@@ -10,7 +10,7 @@ return {
             "html",
             "javascript",
             "javascriptreact",
-            "typescriptreact",
+            -- "typescriptreact",
             "less",
             "sass",
             "scss",
